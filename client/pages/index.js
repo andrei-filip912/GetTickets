@@ -24,14 +24,11 @@ const Index = ({ currentUser, tickets }) => {
             tickets.filter((val) => {
                 if(val.title.toLowerCase().includes(filter)) {
                     array.push(val);
-                    // console.log('yes');
                 }
                 else {
-                    // console.log('no');
                 }
             })
             setFilteredTickets(array);
-            console.log(array);
         }
         else {
             setFilteredTickets(tickets);
