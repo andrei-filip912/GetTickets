@@ -1,0 +1,37 @@
+.margin-bottom {
+    margin-bottom: 15px;
+}
+.concert-img {
+    margin-top: 2%;
+}
+.filters {
+    margin: 0.5% 0 1.25% 0;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.form-color {
+    background-color: #9fd8ed;
+}
+
+ .sad-icon {
+    width: 8%;
+    height: 8%;
+ }
+
+ .vh-40 {
+    height: 40vh;
+ }
+ .vh-90 {
+    height: 90vh;
+ }
+ .vh-80 {
+    height: 80vh;
+ }
+ .ticket-description {
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+ }
