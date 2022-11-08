@@ -3,16 +3,18 @@ import { create } from 'ts-node';
 import { app } from '../../app';
 
 const createTicket = () => {
-   return request(app)
-   .post('/api/tickets')
-   .set('Cookie', global.signin())
-   .send({
-       title: 'asdfa',
-       price: 42,
-       date: new Date(),
-       location: 'somewhere',
-       description: 'ffff',
-   });
+    const date = new Date("2028-12-30");
+
+    return request(app)
+        .post('/api/tickets')
+        .set('Cookie', global.signin())
+        .send({
+            title: 'asdfa',
+            price: 42,
+            date: date,
+            location: 'somewhere',
+            description: 'ffff',
+        });
 }
 
 test('should fetch a list of tickets', async () => {

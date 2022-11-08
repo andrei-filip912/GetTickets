@@ -119,10 +119,12 @@ test('creates ticket with valid inputs', async () => {
     let tickets = await Ticket.find({});
     expect(tickets.length).toEqual(0);
 
+    const date = new Date("2028-12-30");
+    
     const mockTicket = {
         title: 'asdfasd',
         price: 20,
-        date: new Date(),
+        date: date,
         location: 'somewhere',
         description: 'fasd'
     };
@@ -143,10 +145,12 @@ test('creates ticket with valid inputs', async () => {
 });
 
 test('publishes an event', async () => {
+    const date = new Date("2028-12-30");
+    
     const mockTicket = {
         title: 'asdfasd',
         price: 20,
-        date: new Date(),
+        date: date,
         location: 'somewhere'
     };
     // add save ticket check

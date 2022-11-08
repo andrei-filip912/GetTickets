@@ -7,7 +7,7 @@ import { natsWrapper } from "../../nats-wrapper";
 const initialTicket = {
     title: 'asdf',
     price: 20,
-    date: new Date(),
+    date: new Date("2028-12-30"),
     location: 'fsd',
     description: 'avc'
 };
@@ -28,7 +28,7 @@ test('should return 404 if there is no ticket with the provided id', async () =>
         .send({
             title: 'fasdf',
             price: 66,
-            date: new Date(),
+            date: new Date("2028-12-30"),
             location: 'fsd'
         })
         .expect(404);
@@ -41,7 +41,7 @@ test('should return 401 if the user is not authenticated', async () => {
         .send({
             title: 'fasdf',
             price: 66,
-            date: new Date(),
+            date: new Date("2028-12-30"),
             location: 'fsd'
         })
         .expect(401);

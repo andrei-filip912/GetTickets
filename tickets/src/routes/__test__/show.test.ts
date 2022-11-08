@@ -16,7 +16,7 @@ test('should return 404 if no ticket is found', async () => {
 test('should return the actual ticket, if it exists', async () => {
     const title = 'concert';
     const price = 42;
-    const date= new Date();
+    const date= new Date("2028-12-30");
     const location = 'asd';
 
     const response = await request(app)
