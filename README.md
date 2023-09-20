@@ -37,7 +37,7 @@ Pre requirements:
 * [Docker](https://www.docker.com/)
 * [Kubernetes](https://kubernetes.io/) (can be installed from the docker desktop clients in Settings)
 * Having two secrets configured in kubernetes locally:
-   * jwt-secret: kubectl create secret generic jwt-secret --from-literal=JWT_KEY=<<insert any string>>
+   * jwt-secret: kubectl create secret generic jwt-secret --from-literal=JWT_KEY=<<string>>
    * stripe-secret: create secret generic stripe-secret --from-literal=STRIPE_KEY=<<insert secret key obtained from [stripe](https://dashboard.stripe.com/test/apikeys)>>
 
 
