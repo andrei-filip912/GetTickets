@@ -29,17 +29,25 @@ The app consists of 5 microservices, create using NodeJS environment, ExpressJs 
 
 
 ## Get started
-To start up the project open a terminal window and go to the rootfolder of this project. Run the following line:
 
-`skaffold dev`
-Pre requirements:
+### Pre-requirements: ###
 * [NodeJS](https://nodejs.org/en)
 * [Docker](https://www.docker.com/)
 * [Kubernetes](https://kubernetes.io/) (can be installed from the docker desktop clients in Settings)
 * [Ingress-nginx-controller](https://kubernetes.github.io/ingress-nginx/deploy/) (quick install-> if you don't have helm)
+* Modify the hosts file: Windows location: C:\Windows\System32\drivers\etc\hosts  add the entry on a new line at the end of the file: "127.0.0.1 ticketing.dev".
 * Having two secrets configured in kubernetes locally:
    * jwt-secret: kubectl create secret generic jwt-secret --from-literal=JWT_KEY=<< insert any string >>
    * stripe-secret: create secret generic stripe-secret --from-literal=STRIPE_KEY=<< insert secret key obtained from [stripe](https://dashboard.stripe.com/test/apikeys) >>
+
+### Start-up ###
+Open a terminal window and go to the rootfolder of this project. Run the following line:
+
+   `skaffold dev`
+   
+Wait for the services to run. On the first run you may get some erros which should be fixed by stopping the process and running the command again.
+You can access the application at **ticketing.dev** in your browser.
+
 
 
 (Note: this repository was created recently for keeping all of the services together. On my github profile there is a public repo for each one of the services, which is way older than this one)
